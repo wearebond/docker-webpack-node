@@ -12,7 +12,7 @@ steps:
 1. Add new instructions to the `Dockerfile`
 2. Build the image
 ```
-docker build --tag bond-webpack-node@test ./10/
+docker build --tag bond-webpack-node:test ./10/
 ```
 
 3. Clone your sample project somewhere locally for testing
