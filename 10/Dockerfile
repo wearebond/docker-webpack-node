@@ -17,4 +17,4 @@ RUN mkdir -p /opt/rclone && \
     ln -s /opt/rclone/rclone-v1.52.3-linux-amd64/rclone /usr/local/bin/rclone
 
 # ImageMagick and GraphicsMagick are dependencies of our Webpack build process
-RUN apt-get install imagemagick graphicsmagick ffmpeg -y
+RUN apt-get install imagemagick graphicsmagick ffmpeg git-lfs -y
