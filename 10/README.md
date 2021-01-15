@@ -12,7 +12,7 @@ steps:
 1. Add new instructions to the `Dockerfile`
 2. Build the image
 ```
-docker build --tag bond-webpack-node:test ./10/
+docker build --tag wearebond/webpack-node:10 ./10/
 ```
 
 3. Clone your sample project somewhere locally for testing
@@ -38,3 +38,11 @@ npm run build
 ```
 
 7. Verify the build succeeds and produces the output you expect
+
+## Update Docker Hub
+
+Once you're satisfied with your new image, publish to hub.docker.com using:
+
+```
+docker push wearebond/webpack-node:10
+```
