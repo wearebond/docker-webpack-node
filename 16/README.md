@@ -1,7 +1,7 @@
-# Webpack Builds on Node v14
+# Webpack Builds on Node v16
 
 This image is intended to satisfy all of the prerequisites of our webpack build
-processes designed to operate in a Node 14 environment. It is intended for use
+processes designed to operate in a Node 16 environment. It is intended for use
 in CI/CD pipelines and Github actions.
 
 ## Testing Changes Locally
@@ -13,26 +13,31 @@ steps:
 
 1. Add new instructions to the `Dockerfile`
 2. Build the image
+
 ```
-docker build --platform linux/x86_64 --tag wearebond/webpack-node:14 ./14/
+docker build --platform linux/x86_64 --tag wearebond/webpack-node:16 ./16/
 ```
 
 3. Clone your sample project somewhere locally for testing
+
 ```
 git clone git@github.com:wearebond/sample-project.git
 ```
 
 4. Find the image ID
+
 ```
 docker images
 ```
 
 5. Run the image with your sample project mounted
+
 ```
 docker run --platform linux/x86_64 -it -v /path/to/sample-project:/www --entrypoint /bin/bash [[IMAGE_ID]]
 ```
 
 6. Install and build your project inside the virtual machine
+
 ```
 cd /www
 npm ci
@@ -46,5 +51,5 @@ npm run build
 Once you're satisfied with your new image, publish to hub.docker.com using:
 
 ```
-docker push wearebond/webpack-node:14
+docker push wearebond/webpack-node:16
 ```
