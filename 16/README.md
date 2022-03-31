@@ -6,6 +6,8 @@ in CI/CD pipelines and Github actions.
 
 ## Testing Changes Locally
 
+> NOTE: M1 Macbook's require a special flag for building / running x86_64 images. Please use `--platform linux/x86_64` in build/run commands to ensure compatibility. On Intel-based Mac's this flag can be omitted. See: https://stackoverflow.com/a/69075554
+
 To install new dependencies and test the image locally, you can follow these
 steps:
 
@@ -13,7 +15,7 @@ steps:
 2. Build the image
 
 ```
-docker build --tag wearebond/webpack-node:16 ./16/
+docker build --platform linux/x86_64 --tag wearebond/webpack-node:16 ./16/
 ```
 
 3. Clone your sample project somewhere locally for testing
@@ -31,7 +33,7 @@ docker images
 5. Run the image with your sample project mounted
 
 ```
-docker run -it -v /path/to/sample-project:/www --entrypoint /bin/bash [[IMAGE_ID]]
+docker run --platform linux/x86_64 -it -v /path/to/sample-project:/www --entrypoint /bin/bash [[IMAGE_ID]]
 ```
 
 6. Install and build your project inside the virtual machine
