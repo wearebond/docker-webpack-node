@@ -6,3 +6,4 @@ version. Intended for use in CI/CD pipelines and Github actions.
 
 - [Node 10](/10)
 - [Node 14](/14)
+- [Node 16](/16)
