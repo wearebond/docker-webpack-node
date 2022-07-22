@@ -4,6 +4,12 @@ This image is intended to satisfy all of the prerequisites of our webpack build
 processes designed to operate in a Node 14 environment. It is intended for use
 in CI/CD pipelines and Github actions.
 
+## Legacy Version Available
+
+Note: the original Node 14 image shipped with NPM v6. This one has been updated
+to use NPM v8 by default. If you need NPM v6 in your project, use:
+`wearebond/webpack-node:14-legacy`
+
 ## Testing Changes Locally
 
 > NOTE: M1 Macbook's require a special flag for building / running x86_64 images. Please use `--platform linux/x86_64` in build/run commands to ensure compatibility. On Intel-based Mac's this flag can be omitted. See: https://stackoverflow.com/a/69075554

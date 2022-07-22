@@ -2,6 +2,9 @@ FROM node:16-buster
 
 RUN apt-get update
 
+# Update NPM to V8
+RUN npm i -g npm@8
+
 # https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html
 RUN apt-get install groff -y && \
     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
