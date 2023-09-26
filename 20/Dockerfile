@@ -10,11 +10,11 @@ RUN apt-get install groff -y && \
 
 # For now, we use rclone because it contains a better diff engine than AWS CLI
 RUN mkdir -p /opt/rclone && \
-    echo "17a5f317cf9d2675f21f395d18a00430  /opt/rclone/rclone-v1.60.1-linux-amd64.zip" > /opt/rclone/checksum && \
-    wget https://github.com/rclone/rclone/releases/download/v1.60.1/rclone-v1.60.1-linux-amd64.zip -P /opt/rclone && \
+    echo "75cec3bb99c009d2e4383962fc0e89b8  /opt/rclone/rclone-v1.64.0-linux-amd64.zip" > /opt/rclone/checksum && \
+    wget https://github.com/rclone/rclone/releases/download/v1.64.0/rclone-v1.64.0-linux-amd64.zip -P /opt/rclone && \
     md5sum -c /opt/rclone/checksum && \
-    unzip /opt/rclone/rclone-v1.60.1-linux-amd64.zip -d /opt/rclone/ && \
-    ln -s /opt/rclone/rclone-v1.60.1-linux-amd64/rclone /usr/local/bin/rclone
+    unzip /opt/rclone/rclone-v1.64.0-linux-amd64.zip -d /opt/rclone/ && \
+    ln -s /opt/rclone/rclone-v1.64.0-linux-amd64/rclone /usr/local/bin/rclone
 
 # ImageMagick and GraphicsMagick are dependencies of our Webpack build process
 RUN apt-get install imagemagick graphicsmagick ffmpeg git-lfs -y
