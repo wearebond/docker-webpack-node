@@ -8,3 +8,4 @@ version. Intended for use in CI/CD pipelines and Github actions.
 - [Node 14](/14)
 - [Node 16](/16)
 - [Node 18](/18)
+- [Node 20](/20)
